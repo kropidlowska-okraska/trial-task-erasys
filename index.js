@@ -11,15 +11,16 @@ let log = require('bunyan').createLogger({
 
 let apiRouter = require('./lib/router')
 
+let cors = require('cors')
+
 express()
   .use('/api', (req, res, next) => {
     log.debug(`${req.method} ${req.url}`)
     next()
   })
   .use('/api', apiRouter)
+  .use(cors())
   .listen(process.env.PORT || 3000, () => {
     log.info(`Server is listening on http://localhost:${PORT}`)
   })
 
-const cors = require('cors')
-app.use(cors())
