@@ -20,3 +20,6 @@ express()
   .listen(process.env.PORT || 3000, () => {
     log.info(`Server is listening on http://localhost:${PORT}`)
   })
+
+const cors = require('cors')
+app.use(cors())
