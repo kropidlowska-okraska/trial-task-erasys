@@ -9,7 +9,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "eslint": "eslint ./ --cache"
+    "eslint": "eslint ./ --cache",
+    "prettier-all": "prettier --write '{{public,src}/**/*,*}.{js,json,html}'"
   },
   "author": "erasys GmbH",
   "license": "ISC",
@@ -19,6 +20,11 @@
   "dependencies": {
     "bunyan": "^1.8.12",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "express": "^4.16.3",
     "hashids": "^1.1.4",
     "lodash": "^4.17.10",
@@ -38,5 +44,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "singleQuote": true
   }
 }
