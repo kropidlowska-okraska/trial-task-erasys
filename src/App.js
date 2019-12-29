@@ -11,8 +11,22 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios('/search?length=32&sorting=DISTANCE')
-        setProfiles(result.data.items)
+        const resBasicData = await axios('/search?length=32')
+        const basicData = resBasicData.data.items
+        const ids = resBasicData.data.items.map(el => el.id)
+
+        let url = '/profiles?'
+
+        ids.forEach(el => (url = url.concat(`ids=${el}&`)))
+
+        const resDetailedData = await axios(url)
+        const detailedData = resDetailedData.data
+
+        // https://stackoverflow.com/questions/38612972/how-to-merge-two-arrays-of-objects-by-id-using-lodash
+
+        const mergedData = _.map(basicData, item => _.merge(item, _.find(detailedData, { id: item.id })))
+
+        setProfiles(mergedData)
       } catch (error) {
         console.error(error)
       }
