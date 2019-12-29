@@ -46,7 +46,11 @@ const App = () => {
           }
           imageAlt={person.picture?.comment}
           onlineStatus={person.online_status}
-          key={person.name}
+          location={person.location?.city}
+          distance={person.location?.distance}
+          headline={person.headline}
+          lastLogin={person.last_login}
+          key={person.id}
         />
       ))}
     </PageWrapper>

@@ -5,4 +5,5 @@ export const PageWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   background-color: #0c4a66;
+  padding: 40px 0;
 `

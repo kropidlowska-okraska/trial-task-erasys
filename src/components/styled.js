@@ -4,7 +4,7 @@ export const TileWrapper = styled.article`
   padding: 10px;
   margin: 10px
   width: 300px;
-  background-color: #937520;
+  background-color: white;
 `
 
 export const Image = styled.img`
