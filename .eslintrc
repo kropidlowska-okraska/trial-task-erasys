@@ -1,0 +1,12 @@
+{
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "globals": {
+    "window": true,
+    "fetch": true,
+    "$": true
+  },
+
+  "rules": { "react/jsx-filename-extension": 0 },
+  "overrides": []
+}

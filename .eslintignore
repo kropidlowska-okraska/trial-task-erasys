@@ -1,0 +1,11 @@
+**/*.{jpg,svg,png,pdf}
+
+data
+
+lib
+
+/src/App.test.js
+
+/src/serviceWorker.js
+
+index.js

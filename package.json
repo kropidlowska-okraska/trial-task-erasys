@@ -8,7 +8,8 @@
     "start-app": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "eslint ./ --cache"
   },
   "author": "erasys GmbH",
   "license": "ISC",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "bunyan": "^1.8.12",
+    "eslint-config-airbnb": "^18.0.1",
     "express": "^4.16.3",
     "hashids": "^1.1.4",
     "lodash": "^4.17.10",
@@ -24,9 +26,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.3.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
